@@ -12,7 +12,11 @@
 <meta property="og:description" content="I turn support tickets into fixed software. 12,000+ replies since 2022.">
 <meta property="og:image" content="https://anower16.github.io/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2308090b'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='34' fill='%23c9dbef'>A</text></svg>">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest"><rect width='64' height='64' rx='16' fill='%2308090b'/><text x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia' font-style='italic' font-size='34' fill='%23c9dbef'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -224,6 +228,55 @@ h2{font-size:clamp(34px,4.8vw,60px);line-height:1;letter-spacing:-.04em;margin:0
 footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:34px 0 46px;font:12.5px var(--mono);color:var(--faint)}
 kbd{font:11px var(--mono);border:1px solid var(--line2);border-radius:5px;padding:1px 6px;background:var(--panel2);color:var(--mu)}
 
+
+/* work: agents & automations */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:-18px 0 28px}
+.filters button{font:13px var(--sans);color:var(--mu);background:var(--panel);border:1px solid var(--line2);border-radius:999px;padding:8px 14px;cursor:pointer;transition:.2s}
+.filters button:hover{color:var(--fg)}
+.filters button[aria-pressed=true]{background:var(--fg);color:#0a0b0d;border-color:var(--fg)}
+.filters button b{font-weight:500;opacity:.55;margin-left:6px}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:960px){.works{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.works{grid-template-columns:1fr}}
+.wk{display:flex;flex-direction:column;gap:8px;padding:24px;min-height:200px;transition:opacity .35s,transform .35s,border-color .25s}
+.wk.hide{display:none}
+.wk.w2{grid-column:span 2}
+@media(max-width:640px){.wk.w2{grid-column:auto}}
+.wk:hover{border-color:#343b45}
+.wk .hd{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.wk .type{font:10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid}
+.type.agent{color:var(--blue);border-color:#3d7fd155;background:#3d7fd114}
+.type.auto{color:var(--sage);border-color:#3f9a5c55;background:#3f9a5c14}
+.type.oss{color:var(--sand);border-color:#c4904255;background:#c4904214}
+.wk .when{font:11.5px var(--mono);color:var(--faint);display:flex;align-items:center;gap:6px}
+.wk .when:before{content:"";width:6px;height:6px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80}
+.wk .when.od:before{background:var(--faint);box-shadow:none}
+.wk h3{margin:14px 0 2px;font-size:20px;letter-spacing:-.025em}
+.wk p.one{margin:2px 0 0;color:#c3cad2;font-size:15.5px;line-height:1.45}
+.flowline{margin-top:auto;padding-top:16px;font:12px/1.5 var(--mono);color:var(--faint);border-top:1px dashed var(--line);}
+.wk h3+p.one+.flowline{margin-top:auto}
+.wk .chips{margin-top:auto;padding-top:14px}
+.wk a.lnk{font:12.5px var(--mono);color:var(--fg);display:inline-flex;gap:6px;margin-top:8px}
+.wk a.lnk:hover{text-decoration:underline}
+.feat{grid-column:span 3;display:grid;grid-template-columns:1.1fr 1fr;gap:28px;padding:30px;background:radial-gradient(80% 120% at 0% 0%,#3d7fd126,transparent 60%),radial-gradient(60% 90% at 100% 100%,#c4904218,transparent 60%),var(--panel)}
+@media(max-width:960px){.feat{grid-column:1/-1;grid-template-columns:1fr}}
+.feat>div:first-child{align-self:center}
+.feat h3{font-size:40px;margin-top:22px;letter-spacing:-.035em}
+.feat p.one{font-size:18px}
+.feat .flowline{margin-top:18px;border-top:0;padding-top:0;color:var(--mu)}
+.feat .ok{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;font:12.5px var(--mono);color:var(--mu)}
+.feat .ok b{color:var(--fg);font-weight:500}
+.moves{border:1px solid var(--line2);border-radius:16px;background:#0a0c0f;overflow:hidden;align-self:start}
+.moves .mh{display:flex;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line);font:12px var(--mono);color:var(--faint)}
+.moves .mh b{color:var(--fg);font-weight:500}
+.moves ul{list-style:none;margin:0;padding:6px 8px 10px}
+.moves li{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:8px;border-radius:10px;font-size:13.5px;opacity:0;transform:translateX(-8px);transition:opacity .4s,transform .4s}
+.moves.go li{opacity:1;transform:none}
+.moves li:hover{background:var(--panel2)}
+.moves li .pid{font:11px var(--mono);color:var(--c);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);border-radius:6px;text-align:center;padding:1px 0}
+.moves li .st{font:11px var(--mono);color:var(--faint)}
+.moves li span:nth-child(2) small{display:block;font-size:11.5px;color:var(--faint);font-family:var(--mono)}
+
 /* reveal */
 .rv{opacity:0;transform:translateY(26px);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
 .rv.in{opacity:1;transform:none;filter:none}
@@ -332,7 +385,7 @@ dialog .hint{padding:10px 18px;border-top:1px solid var(--line);font:11.5px var(
       <div class="cell rv" style="--c:var(--blue)"><div class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg></div><h3>Release → customer loop</h3><p>Every release is checked against open issues and the vulnerability log. Waiting customers hear about the fix the day it ships.</p></div>
       <div class="cell rv" style="--c:var(--sand)"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v20"/><path d="M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Revenue recovery</h3><p>Failed-payment outreach from Stripe, plus a 7-play customer-success program driven by PostHog data.</p></div>
       <div class="cell rv" style="--c:var(--blue)"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Security triage</h3><p>Wordfence, Patchstack and WPScan reports taken through to verified fixes.</p></div>
-      <div class="cell rv" style="--c:var(--sage)"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3>Team tooling</h3><p>A shared issue tracker, MCP servers for FreeScout and Crisp, and auto-built monthly product reviews.</p></div>
+      <div class="cell rv" style="--c:var(--sage)"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div><h3>Team tooling</h3><p>A shared issue tracker, MCP connections for FreeScout and Crisp, and auto-built monthly product reviews.</p></div>
     </div>
   </section>
 
@@ -368,12 +421,59 @@ dialog .hint{padding:10px 18px;border-top:1px solid var(--line);font:11.5px var(
   </section>
 
   <section id="work">
-    <div class="kick rv">Open source</div>
-    <h2 class="rv">Tools I built, <em>shared</em>.</h2>
-    <p class="sub rv">Pieces of my own support stack, cleaned up for anyone to use.</p>
-    <div class="proj">
-      <a class="cell pj rv" href="https://github.com/Anower16/crisp-mcp"><div class="top"><span>MCP server · Node.js</span><span class="ar">→</span></div><h3>crisp-mcp</h3><p>Lets Claude read, search, triage and draft replies in the Crisp live-chat inbox. Sending stays off until a person turns it on.</p><div class="chips"><span>MCP</span><span>Crisp API</span><span>Claude Code</span></div></a>
-      <a class="cell pj rv" href="https://github.com/Anower16/support-qa-playbook"><div class="top"><span>Playbook · Markdown</span><span class="ar">→</span></div><h3>support-qa-playbook</h3><p>How I turn a ticket into a bug report a developer can fix on the first read, with ready-to-use templates.</p><div class="chips"><span>QA</span><span>WordPress</span><span>Templates</span></div></a>
+    <div class="kick rv">Work</div>
+    <h2 class="rv">Agents &amp; automations <em>I built</em>.</h2>
+    <p class="sub rv">Most of these run inside weDevs every day, on a schedule or on demand. AI drafts and checks the work, and a person approves anything that reaches a customer or a repo. A few are open source.</p>
+    <div class="filters rv" role="toolbar" aria-label="Filter work">
+      <button aria-pressed="true" data-f="all">All<b>11</b></button>
+      <button aria-pressed="false" data-f="agent">AI agents<b>5</b></button>
+      <button aria-pressed="false" data-f="auto">Automations<b>4</b></button>
+      <button aria-pressed="false" data-f="oss">Open source<b>2</b></button>
+    </div>
+    <div class="works">
+      <article class="cell wk feat rv" data-k="agent">
+        <div>
+          <div class="hd"><span class="type agent">AI agent · flagship</span><span class="when">Mon–Fri · 10:00</span></div>
+          <h3>FlyCommerce CSM agent</h3>
+          <p class="one">Every morning it finds who needs a nudge and drafts the email. I hit send.</p>
+          <div class="flowline">PostHog + Stripe → 7 plays → drafts → Slack summary</div>
+          <div class="ok"><span><b>7</b> plays</span><span><b>3</b> data sources</span><span><b>0</b> emails sent without me</span></div>
+          <div class="chips"><span>PostHog</span><span>Stripe</span><span>FreeScout</span><span>Google Sheets</span><span>Slack</span><span>Claude Code</span></div>
+        </div>
+        <div class="moves" id="moves" aria-label="Example of the agent's daily summary">
+          <div class="mh"><span><b>Today's moves</b> · example</span><span>10:00</span></div>
+          <ul>
+            <li style="--c:var(--blue)"><span class="pid">P1</span><span>Checkout rescue<small>unfinished $1 sign-ups · within 24 h</small></span><span class="st">drafted</span></li>
+            <li style="--c:var(--blue)"><span class="pid">P2</span><span>Trial rescue<small>trial ends in 7 · 3 · 1 days</small></span><span class="st">drafted</span></li>
+            <li style="--c:var(--sage)"><span class="pid">P3</span><span>Activation<small>new store, no products after 48 h</small></span><span class="st">drafted</span></li>
+            <li style="--c:var(--sage)"><span class="pid">P4</span><span>New subscriber<small>welcome + before first full charge</small></span><span class="st">queued</span></li>
+            <li style="--c:var(--sand)"><span class="pid">P5</span><span>Failed payment<small>day 0 · 3 · 7</small></span><span class="st">drafted</span></li>
+            <li style="--c:var(--sand)"><span class="pid">P6</span><span>Win-back<small>trial ended or canceled · day 7–14</small></span><span class="st">queued</span></li>
+            <li style="--c:var(--blue)"><span class="pid">P7</span><span>Paid care<small>monthly check-ins + alerts</small></span><span class="st">scheduled</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="cell wk rv" data-k="agent"><div class="hd"><span class="type agent">AI agent</span><span class="when od">On demand</span></div>
+        <h3>QA agent</h3><p class="one">Ticket in, reproducible bug report out.</p><div class="flowline">ticket → code → repro → review → issue + reply</div></article>
+      <article class="cell wk rv" data-k="agent"><div class="hd"><span class="type agent">AI agent</span><span class="when od">On demand</span></div>
+        <h3>Live-chat agent</h3><p class="one">Routes every chat and drafts the reply.</p><div class="flowline">2 Crisp inboxes → route → draft → my go</div></article>
+      <article class="cell wk rv" data-k="auto"><div class="hd"><span class="type auto">Automation</span><span class="when">Mon–Fri · 12:00 &amp; 16:00</span></div>
+        <h3>Release check</h3><p class="one">Tells waiting customers the day a fix ships.</p><div class="flowline">release → match issues → reply drafts</div></article>
+      <article class="cell wk rv" data-k="auto"><div class="hd"><span class="type auto">Automation</span><span class="when">Mon &amp; Fri</span></div>
+        <h3>Failed-payment outreach</h3><p class="one">Wins back failed renewals before they churn.</p><div class="flowline">Stripe → email + 2 follow-ups → tracker</div></article>
+      <article class="cell wk rv" data-k="auto"><div class="hd"><span class="type auto">Automation</span><span class="when">Monthly</span></div>
+        <h3>Product review decks</h3><p class="one">Monthly decks, built from real data.</p><div class="flowline">helpdesk + chat + GitHub → slides</div></article>
+      <article class="cell wk rv" data-k="auto"><div class="hd"><span class="type auto">Automation</span><span class="when">Daily · weekly</span></div>
+        <h3>Reporting on autopilot</h3><p class="one">Daily, weekend and monthly reports fill themselves.</p><div class="flowline">6 sources → one report</div></article>
+      <article class="cell wk rv" data-k="agent"><div class="hd"><span class="type agent">AI agent</span><span class="when od">On demand</span></div>
+        <h3>Vulnerability formatter</h3><p class="one">Raw disclosure in, developer-ready report out.</p><div class="flowline">Wordfence · Patchstack · WPScan → report</div></article>
+      <article class="cell wk w2 rv" data-k="agent"><div class="hd"><span class="type agent">AI agent</span><span class="when od">On demand</span></div>
+        <h3>Klasio knowledge agent</h3><p class="one">Instant answers for AppSumo and pre-sales.</p><div class="flowline">docs + past threads → answer</div></article>
+      <article class="cell wk w2 rv" data-k="oss"><div class="hd"><span class="type oss">Open source</span><span class="when od">Node.js</span></div>
+        <h3>crisp-mcp</h3><p class="one">Lets Claude work the Crisp inbox, safely.</p><div class="flowline">read · search · triage · draft</div><a class="lnk" href="https://github.com/Anower16/crisp-mcp">GitHub ↗</a></article>
+      <article class="cell wk  rv" data-k="oss"><div class="hd"><span class="type oss">Open source</span><span class="when od">Markdown</span></div>
+        <h3>support-qa-playbook</h3><p class="one">From ticket to fixable bug report, with templates.</p><div class="flowline">bug · reply · access · security</div><a class="lnk" href="https://github.com/Anower16/support-qa-playbook">GitHub ↗</a></article>
     </div>
   </section>
 
@@ -436,15 +536,25 @@ async function play(){for(;;){const t=tickets[ti++%tickets.length];
 const tp=document.getElementById('tp'),tn=document.getElementById('tn'),tt=document.getElementById('tt'),tc=document.getElementById('tc');
 if(reduce){st.forEach(s=>s.classList.add('ok'));res.classList.add('on')}else play();
 
+
+/* work filters */
+document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{const f=b.dataset.f;document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  const go=()=>document.querySelectorAll('.wk').forEach(w=>w.classList.toggle('hide',f!=='all'&&w.dataset.k!==f));document.startViewTransition?document.startViewTransition(go):go()});
+/* today's moves: rows slide in one by one */
+const mv=document.getElementById('moves');[...mv.querySelectorAll('li')].forEach((li,i)=>li.style.transitionDelay=(i*110)+'ms');
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){mv.classList.add('go');o.disconnect()}}),{threshold:.3}).observe(mv);
+
 /* ⌘K: ask about me / jump */
 const K=document.getElementById('k'),q=document.getElementById('kq'),L=document.getElementById('kl'),A=document.getElementById('ka');
-const items=[["Impact numbers","#impact"],["How I work","#how"],["Value I bring","#value"],["Journey","#journey"],["Products","#products"],["Open-source work","#work"],["Contact","#contact"],["GitHub","https://github.com/Anower16"],["LinkedIn","https://www.linkedin.com/in/mdanowerhossain/"]];
+const items=[["Impact numbers","#impact"],["How I work","#how"],["Value I bring","#value"],["Journey","#journey"],["Products","#products"],["Agents & automations","#work"],["Contact","#contact"],["GitHub","https://github.com/Anower16"],["LinkedIn","https://www.linkedin.com/in/mdanowerhossain/"]];
 const faq=[[/tool|stack|tech|use/,"Claude Code and MCP, Node.js, TypeScript, PHP and MySQL to build; FreeScout, HelpScout and Crisp for support; Stripe, PostHog and Google Sheets for data."],
 [/product|plugin|which|support what/,"Ten weDevs products: WP ERP, Project Manager, User Frontend, weDocs, HappyAddons, weMail, Subscribe2, Klasio, FlyCommerce and AppSero."],
 [/how many|customer|number|ticket|repl|chat/,"12,000+ ticket replies and 7,500+ customers helped since 2022, plus 3,500+ live chats, 800+ issues filed and 500+ WordPress.org replies."],
 [/ai|claude|automat|agent/,"A Claude Code pipeline: research → code check → reproduce → independent review → human approval → issue + reply. AI drafts; a person approves every step."],
 [/role|job|title|who|manager/,"Support Manager at weDevs, based in Dhaka, Bangladesh. Started in Dokan support in 2022."],
 [/contact|hire|reach|email|talk|linkedin/,"Email manikanower16@gmail.com or message me on LinkedIn: linkedin.com/in/mdanowerhossain"],
+[/csm|flycommerce|customer success|churn|trial/,"A FlyCommerce customer-success agent: every weekday it reads PostHog, Stripe and the admin panel, runs seven plays (checkout rescue, trial rescue, activation, new subscriber, failed payment, win-back, paid care) and drafts outreach for me to send."],
+[/automat|schedul|built|agent|project|work/,"Five AI agents (CSM, QA, live chat, vulnerability formatter, Klasio knowledge), four scheduled automations (release check, failed payments, review decks, reporting) and two open-source repos. See the Work section."],
 [/security|vuln|wordfence|patchstack/,"I triage Wordfence, Patchstack and WPScan reports through to verified fixes and track each one in a shared vulnerability log."]];
 let sel=0,view=items;
 function draw(){const s=q.value.toLowerCase().trim();const hit=s.length>2&&faq.find(f=>f[0].test(s));A.style.display=hit?'block':'none';A.textContent=hit?hit[1]:'';
