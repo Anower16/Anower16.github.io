@@ -60,7 +60,8 @@ nav .k{font:12px var(--mono);color:var(--mu);border:1px solid var(--line2);borde
 .status .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 #4ade80aa;animation:ping 2s infinite}
 @keyframes ping{70%{box-shadow:0 0 0 8px #4ade8000}100%{box-shadow:0 0 0 0 #4ade8000}}
 h1{font-size:clamp(46px,7.2vw,92px);line-height:.96;letter-spacing:-.045em;font-weight:700;margin:26px 0 24px}
-h1 em{font-size:1.08em;background:linear-gradient(100deg,var(--blue),var(--sage) 45%,var(--sand));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+h1 em{font-size:1.08em}
+h1 em span{background:linear-gradient(100deg,var(--blue),var(--sage) 45%,var(--sand));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
 .rot{display:inline-grid;vertical-align:top}
 .rot span{grid-area:1/1;opacity:0;transform:translateY(.4em);transition:opacity .5s,transform .5s}
 .rot span.on{opacity:1;transform:none}
