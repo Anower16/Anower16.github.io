@@ -539,7 +539,7 @@ if(reduce){st.forEach(s=>s.classList.add('ok'));res.classList.add('on')}else pla
 
 /* work filters */
 document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{const f=b.dataset.f;document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-  const go=()=>document.querySelectorAll('.wk').forEach(w=>w.classList.toggle('hide',f!=='all'&&w.dataset.k!==f));document.startViewTransition?document.startViewTransition(go):go()});
+  const go=()=>document.querySelectorAll('.wk').forEach(w=>{w.classList.toggle('hide',f!=='all'&&w.dataset.k!==f);w.classList.add('in')});document.startViewTransition?document.startViewTransition(go):go()});
 /* today's moves: rows slide in one by one */
 const mv=document.getElementById('moves');[...mv.querySelectorAll('li')].forEach((li,i)=>li.style.transitionDelay=(i*110)+'ms');
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){mv.classList.add('go');o.disconnect()}}),{threshold:.3}).observe(mv);
